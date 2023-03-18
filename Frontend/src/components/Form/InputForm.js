@@ -12,6 +12,8 @@ function TaskForm(props) {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.addTask({ title: task, deadline });
+    setDeadline('')
+    setTask('')
   };
 
   return (
