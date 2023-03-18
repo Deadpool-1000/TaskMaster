@@ -3,14 +3,13 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-    { name: "Try Now!", href: "/form" },
-    { name: "Motivation", href: "/#" },
-    { name: "About Us", href: "/#" },
-  ];
-  
+  { name: "Try Now!", href: "/form" },
+  { name: "Motivation", href: "/#" },
+  { name: "About Us", href: "/#" },
+];
 
 const Header = () => {
-    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
     <header className=" fixed inset-x-0 top-0 z-50">
       <nav
@@ -48,12 +47,7 @@ const Header = () => {
           ))}
         </div>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <a
-            href="/#"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Log in <span aria-hidden="true">&rarr;</span>
-          </a>
+          
         </div>
       </nav>
       <Dialog
@@ -94,14 +88,6 @@ const Header = () => {
                     {item.name}
                   </a>
                 ))}
-              </div>
-              <div className="py-6">
-                <a
-                  href="/#"
-                  className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </a>
               </div>
             </div>
           </div>
