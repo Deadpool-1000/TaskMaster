@@ -1,10 +1,10 @@
-import Header from "../Partials/Header";
+
 import TechUsed from "./TechUsed";
 
 const Home = () => {
   return (
     <div className="bg-white">
-      <Header />
+
 
       <div className="relative isolate px-6 pt-14 lg:px-8">
         <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80">
@@ -58,7 +58,7 @@ const Home = () => {
                 Get started
               </a>
               <a
-                href="/#"
+                href="/form"
                 className="text-sm font-semibold leading-6 text-gray-900"
               >
                 Learn more <span aria-hidden="true">→</span>

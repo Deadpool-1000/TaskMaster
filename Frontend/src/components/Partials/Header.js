@@ -3,7 +3,7 @@ import { Dialog } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-    { name: "Try Now!", href: "/#" },
+    { name: "Try Now!", href: "/form" },
     { name: "Motivation", href: "/#" },
     { name: "About Us", href: "/#" },
   ];
@@ -12,7 +12,7 @@ const navigation = [
 const Header = () => {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
+    <header className=" fixed inset-x-0 top-0 z-50">
       <nav
         className="flex items-center justify-between p-6 lg:px-8"
         aria-label="Global"
