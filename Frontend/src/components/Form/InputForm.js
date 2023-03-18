@@ -21,7 +21,7 @@ function TaskForm(props) {
           <h3 className="text-base font-semibold leading-6 text-gray-900">
             Create Your Task List.
           </h3>
-          <p className="mt-1 text-sm text-gray-600">
+          <p className="mt-2 text-sm text-gray-600">
             add your tasks along with the appropriate deadline and conditions.
           </p>
         </div>
@@ -36,11 +36,11 @@ function TaskForm(props) {
               </p>
             </div> */}
           {/* </div> */}
-          <div className="mt-5 md:col-span-2 md:mt-0">
+          <div className="mt-5 md:col-span-2 md:mt-0 sm:col-span-1">
             <form onSubmit={handleSubmit}>
               <div className="overflow-hidden shadow sm:rounded-md">
                 <div className="bg-white px-4 py-5 sm:p-6">
-                  <div className="grid grid-cols-6 gap-6">
+                  <div className="grid md:grid-cols-6 gap-6 sm:grid-cols-1 lg:grid-cols-6">
                     <div className="col-span-6 sm:col-span-3">
                       <label
                         htmlFor="task-detail"
@@ -53,8 +53,7 @@ function TaskForm(props) {
                         name="first-name"
                         id="first-name"
                         autoComplete="given-name"
-                        className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 rin
-                        g-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="mt-2 block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         value={task}
                         onChange={(e) => setTask(e.target.value)}
                         ref={taskInputRef}
@@ -76,7 +75,7 @@ function TaskForm(props) {
                         name="date"
                         id="date"
                         autoComplete="family-name"
-                        className="mt-2 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                        className="mt-2 block w-full rounded-md border-0 py-1.5 pl-7 pr-20 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                         value={deadline}
                         onChange={(e) => setDeadline(e.target.value)}
                       />
@@ -99,7 +98,6 @@ function TaskForm(props) {
             </form>
           </div>
         </div>
-        
       </div>
     </>
   );
