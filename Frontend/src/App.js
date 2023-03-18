@@ -1,14 +1,13 @@
-import "./App.css";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./components/Home/Home";
-import NotFound from "./components/404/NotFound";
-
+import Form from "./components/Form/Form";
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<NotFound />} />
+        <Route path="/form" element={<Form/>} />
       </Routes>
     </BrowserRouter>
   );
