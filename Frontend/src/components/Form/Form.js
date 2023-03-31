@@ -3,7 +3,6 @@ import Task from "../TaskList/Task";
 import InputForm from "./InputForm";
 import ResultContext from "../../store/res-context";
 import { useNavigate } from "react-router-dom";
-// import classes from './Form.module.css'
 function generateFinalString(taskList) {
   let final = "Task: ";
   taskList.forEach((task) => {
@@ -38,22 +37,19 @@ function Form() {
     setLoading(true);
     const final = generateFinalString(taskList);
     try {
-      const result = await fetch(
-        "https://api.aivinya.education/api/public/aivachat",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            text: final,
-          }),
-        }
-      );
+      const result = await fetch(process.env.REACT_APP_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text: final,
+        }),
+      });
       console.log(result);
       const data = await result.json();
       ctx.modifyResult(data.res);
-      setLoading(false)
+      setLoading(false);
       navigate("/result");
     } catch (error) {
       console.log(error);
@@ -82,7 +78,7 @@ function Form() {
         className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-10 w-full"
         onClick={() => generateHandler()}
       >
-        {loading?"Loading....":"Generate"}
+        {loading ? "Loading...." : "Generate"}
       </button>
     </div>
   );

@@ -46,9 +46,7 @@ const Header = () => {
             </a>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          
-        </div>
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end"></div>
       </nav>
       <Dialog
         as="div"

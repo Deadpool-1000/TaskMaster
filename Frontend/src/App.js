@@ -6,9 +6,10 @@ import "./App.css";
 import Header from "./components/Partials/Header";
 import Result from "./components/result/Result";
 import { useContext } from "react";
-import ResultContext from './store/res-context'
+import ResultContext from "./store/res-context";
+
 function App() {
-  const ctx = useContext(ResultContext)
+  const ctx = useContext(ResultContext);
   return (
     <div>
       <Header />
