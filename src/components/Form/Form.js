@@ -18,10 +18,7 @@ function generateFinalString(taskList) {
   return final;
 }
 function Form() {
-  const [taskList, setTaskList] = useState([
-    { id: 1, title: "HomeWork", deadline: "tomorrow evening" },
-    { id: 2, title: "Project", deadline: "today 9" },
-  ]);
+  const [taskList, setTaskList] = useState([]);
   const [loading, setLoading] = useState(false);
   const ctx = useContext(ResultContext);
   const navigate = useNavigate();
@@ -58,25 +55,28 @@ function Form() {
   }
   return (
     <div
-      className={`container mx-auto pt-32 md:pl-64 md:pr-64  sm:pr-32 sm:pl-32`}
+      className={`container mx-auto pt-32 md:pl-64 md:pr-64  sm:pr-32 sm:pl-32 mb-32`}
     >
       <InputForm addTask={addTask} />
-      <ul className="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white mt-10 ">
-        {taskList.map((task, i) => {
-          return (
-            <Task
-              id={task.id}
-              key={i}
-              title={task.title}
-              deadline={task.deadline}
-              deleteTask={deleteTask}
-            />
-          );
-        })}
-      </ul>
+      {taskList.length !== 0 && (
+        <ul className="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white mt-10 ">
+          {taskList.map((task, i) => {
+            return (
+              <Task
+                id={task.id}
+                key={i}
+                title={task.title}
+                deadline={task.deadline}
+                deleteTask={deleteTask}
+              />
+            );
+          })}
+        </ul>
+      )}
       <button
         className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-10 w-full"
         onClick={() => generateHandler()}
+        disabled={loading}
       >
         {loading ? "Loading...." : "Generate"}
       </button>

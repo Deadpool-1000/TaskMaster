@@ -3,7 +3,7 @@ import React from "react";
 function Task(props) {
   return (
     <div>
-      <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 rounded  px-4 py-8">
+      <li className="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600 rounded  px-4 py-8">
         {props.title} | {props.deadline}
         <button
           type="submit"
