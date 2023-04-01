@@ -11,17 +11,17 @@ import ResultContext from "./store/res-context";
 function App() {
   const ctx = useContext(ResultContext);
   return (
-    <div className="m-10">
-      <BrowserRouter>
-      <Header />
+    <BrowserRouter>
+      <div className="m-10">
+        <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form />} />
           <Route path="/result" element={<Result res={ctx.result} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 
