@@ -12,8 +12,8 @@ function App() {
   const ctx = useContext(ResultContext);
   return (
     <div>
-      <Header />
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/form" element={<Form />} />
