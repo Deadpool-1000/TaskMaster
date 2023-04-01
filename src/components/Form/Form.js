@@ -55,7 +55,7 @@ function Form() {
   }
   return (
     <div
-      className={`container mx-auto pt-32 md:pl-64 md:pr-64  sm:pr-32 sm:pl-32 mb-32`}
+      className={`container mx-auto pt-32 md:pl-32 md:pr-32 mb-32  `}
     >
       <InputForm addTask={addTask} />
       {taskList.length !== 0 && (
@@ -74,7 +74,7 @@ function Form() {
         </ul>
       )}
       <button
-        className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-10 w-full"
+        className="inline-flex justify-center rounded-md bg-indigo-600 py-2 px-1 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-10 w-full"
         onClick={() => generateHandler()}
         disabled={loading}
       >

@@ -11,7 +11,7 @@ import ResultContext from "./store/res-context";
 function App() {
   const ctx = useContext(ResultContext);
   return (
-    <div>
+    <div className="m-10">
       <Header />
       <BrowserRouter>
         <Routes>
